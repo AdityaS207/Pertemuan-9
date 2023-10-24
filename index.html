@@ -1,0 +1,26 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<title>When yah, sejaog BIMA</title>
+
+<div id="app">
+        <h1>Calculator</h1>
+        <input v-model="input1" placeholder="input1">
+        <input v-model="input2" placeholder="input2">
+        
+        <p class="space"></p>
+        <button v-on:click = "hasil = parseFloat(input1) + parseFloat(input2)">+</button>
+        <button v-on:click = "hasil = parseFloat(input1) - parseFloat(input2)">-</button>
+        <button v-on:click = "hasil = parseFloat(input1) * parseFloat(input2)">*</button>
+        <button v-on:click = "hasil = parseFloat(input1) / parseFloat(input2)">/</button>
+        
+        
+        <h2>Real-Time Calculator</h2>
+        <p>Hasil Jumlah : {{hasil_jumlah}}</p>
+        <p>Hasil Kurang : {{hasil_kurang}}</p>
+        <p>Hasil Kali : {{hasil_kali}}</p>
+        <p>Hasil Bagi : {{hasil_bagi}}</p>
+        
+        <h2>Hasil Tekan Tombol</h2>
+        <p>{{hasil}}</p>
+    </div>
+
+<script src = "script.js"></script>
