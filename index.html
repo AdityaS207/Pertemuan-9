@@ -1,5 +1,10 @@
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <title>When yah, sejaog BIMA</title>
+<style>
+    .back{
+        background-color: palevioletred;
+    }
+</style>
 
 <div id="app">
         <h1>Calculator</h1>
@@ -21,6 +26,15 @@
         
         <h2>Hasil Tekan Tombol</h2>
         <p>{{hasil}}</p>
-    </div>
+    
+        <h2>List</h2>
+        <div>
+            <ul>
+                <li v-for="item in suka" :class="{ back: item.flag }" v-on:click="tooglesuka(item)">
+                    <p>{{ item.nama }} - {{ item.kelas }} - {{ item.hobi }}</p>
+                </li>
+            </ul>
+        </div>
+</div>
 
 <script src = "script.js"></script>
